@@ -6,12 +6,11 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    @items = @list.items
-    @item = @list.items.build
+    @item = Item.new
   end
 
   def create
-    @list = List.create(list_params)
+    @list = List.new(list_params)
     if @list.save
       redirect_to list_path(@list)
     else

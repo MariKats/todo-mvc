@@ -9,9 +9,13 @@
 	<section class="main">
 		<ul class="todo-list">
 			<% @list.items.each do |item| %>
-	      <li>
+	      <li class="<%= "completed" if item.complete? %>">
 	        <div class="view">
-	          <label><%= item.description %></label>
+						<%= form_for([@list, item]) do |f| %>
+							 <%= f.check_box :status, class: "toggle", checked: (true if item.complete?) %>
+						 <% end %>
+						<label><%= item.description %></label>
+
 	        </div>
 	      </li>
 			<% end %>
@@ -21,5 +25,3 @@
 	<footer class="footer">
 	</footer>
 </section>
-
-<!-- <input class="new-todo" placeholder="Add an item..." autofocus=""> -->
