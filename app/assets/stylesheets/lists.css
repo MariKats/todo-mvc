@@ -1,3 +1,17 @@
 div.field_with_errors input[type="text"] {
   border: 1px solid red;
 }
+div.field_with_errors input[type="email"] {
+  border: 1px solid red;
+}
+div.field_with_errors input[type="password"] {
+  border: 1px solid red;
+}
+
+div.center {
+    display: block;
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+}

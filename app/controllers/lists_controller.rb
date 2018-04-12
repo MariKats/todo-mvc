@@ -1,4 +1,6 @@
 class ListsController < ApplicationController
+  before_action :authentication_required
+
   def index
     @lists = List.all
     @list = List.new
