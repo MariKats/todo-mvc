@@ -12,6 +12,7 @@
       <li>
         <div class="view">
           <label><%= link_to list.name, list_path(list) %></label>
+					<%= button_to "x", list_path(list), method: "delete", class: "destroy" %>
         </div>
       </li>
       <% end %>
@@ -24,5 +25,5 @@
 
 <footer class="info">
 	<p>You are logged in as: <%= current_user %></p>
-	<p><%= link_to "Logout", logout_path %></p>
+	<p><%= link_to "Logout", root_path %></p> 
 </footer>
