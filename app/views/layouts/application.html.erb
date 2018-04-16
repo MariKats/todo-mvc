@@ -13,4 +13,12 @@
   <body>
     <%= yield %>
   </body>
+
+  <% if logged_in? %>
+    <footer class="info">
+      <p>You are logged in as: <%= current_user.email %></p>
+      <p><%= link_to "Logout", logout_path %></p>
+    </footer>
+	<% end %>
+
 </html>
