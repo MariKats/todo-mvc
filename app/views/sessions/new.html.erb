@@ -1,0 +1,11 @@
+<section class="todoapp">
+	<header class="header">
+		<h1>Login!</h1>
+    <%= form_tag(sessions_path) do %>
+      <%= email_field_tag :email, "", {class: "new-todo submit_on_enter", placeholder: "Log In with your email!!!"} %>
+      <%= password_field_tag :password, "", {class: "new-todo submit_on_enter", placeholder: "Enter your password"} %>
+    <% end %>
+	</header>
+	<footer class="footer">
+	</footer>
+</section>

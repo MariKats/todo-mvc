@@ -1,0 +1,12 @@
+<section class="todoapp">
+	<header class="header">
+		<h1>Signup!</h1>
+    <%= form_for @user do |f| %>
+	    <%= f.text_field :name, class: "new-todo submit_on_enter", placeholder: (@user.errors.full_messages_for(:name).first || "Enter your name") %>
+	    <%= f.email_field :email, class: "new-todo submit_on_enter", placeholder: (@user.errors.full_messages_for(:email).first || "Enter your email") %>
+	    <%= f.password_field :password, class: "new-todo submit_on_enter", placeholder: (@user.errors.full_messages_for(:password).first || "Choose a password") %>
+    <% end %>
+	</header>
+	<footer class="footer">
+	</footer>
+</section>
