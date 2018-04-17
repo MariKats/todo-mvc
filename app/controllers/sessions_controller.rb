@@ -4,12 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to lists_path
+    auth = request.env["omniauth.auth"]
+    if auth
+      sign_in_with_auth(auth)
     else
-      render :new
+      sign_in_with_password
     end
   end
 
