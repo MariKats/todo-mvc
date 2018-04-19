@@ -14,11 +14,13 @@
     <%= yield %>
   </body>
 
+<footer class="info">
   <% if logged_in? %>
-    <footer class="info">
       <p>You are logged in as: <%= current_user.email %></p>
       <p><%= link_to "Logout", logout_path %></p>
-    </footer>
+  <% else %>
+  	<p><%= link_to "Click here to login via GitHub", '/auth/github' %></p>
 	<% end %>
+</footer>
 
 </html>
