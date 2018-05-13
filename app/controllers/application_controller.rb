@@ -23,10 +23,11 @@ class ApplicationController < ActionController::Base
 
   def sign_in_with_password
     user = User.find_by(email: params[:email].downcase)
-    if user == user.authenticate(params[:password])
+    if user && user == user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to lists_path
     else
+      flash[:danger] = 'Login unsuccessful. Please check your email and/or password.'
       render :new
     end
   end

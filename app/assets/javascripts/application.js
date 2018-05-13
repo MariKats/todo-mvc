@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require_tree .
 //= require sessions
+//= require handlebars.min
+//= require items
+//= require_tree .

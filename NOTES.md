@@ -1,7 +1,10 @@
 # To-Do:
 
-## Text area should clear after submit - js
+## Formatting
+  1. Text area should clear after submit
 
-## Error checking in login-form
+## Login Form
+  1. Error checking in login-form
+  2. Login with password bug
 
-## Login with password bug
+## Print Lists
