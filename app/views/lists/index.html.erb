@@ -9,10 +9,10 @@
 	<section class="main">
 		<ul class="todo-list">
       <% @lists.each do |list| %>
-      <li>
+      <li class="list_<%= list.id %>">
         <div class="view">
           <label><%= link_to list.name, list_path(list) %></label>
-					<%= button_to "x", list_path(list), method: "delete", class: "destroy" %>
+					<%= button_to "x", list_path(list), method: "delete", class: "destroy index" %>
         </div>
       </li>
       <% end %>

@@ -14,5 +14,6 @@
 //= require rails-ujs
 //= require sessions
 //= require handlebars.min
+//= require lists
 //= require items
 //= require_tree .
