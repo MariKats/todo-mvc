@@ -8,3 +8,6 @@
   2. Login with password bug
 
 ## Print Lists
+
+## Bugs
+  1. stikethrough
